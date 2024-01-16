@@ -14,7 +14,6 @@ void main() {
 }
 
 class api_cre extends StatefulWidget {
-
   final l;
 
   api_cre([this.l]);
@@ -65,34 +64,49 @@ class _api_creState extends State<api_cre> {
             ),
             Row(
               children: [
-                ElevatedButton(onPressed: () {
-                  showDialog(context: context, builder: (context) {
-                    return AlertDialog(title: Text("any one chosoe"),
-                      actions: [
-                        TextButton(onPressed: () async {
-                          photo =
-                          await picker.pickImage(source: ImageSource.camera);
-                          t = true;
-                          Navigator.pop(context);
-                          setState(() {});
-                        }, child: Text("camera")),
-                        TextButton(onPressed: () async {
-                          photo =
-                          await picker.pickImage(source: ImageSource.gallery);
-                          t = true;
-                          Navigator.pop(context);
-                          setState(() {});
-                        }, child: Text("gallery")),
-                      ],);
-                  },);
-                }, child: Text("upload photo")),
-                (photo != null) ? Container(height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(image: DecorationImage(
-                      image: FileImage(File(photo!.path)))),):Text("load image ")
+                ElevatedButton(
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text("any one chosoe"),
+                            actions: [
+                              TextButton(
+                                  onPressed: () async {
+                                    photo = await picker.pickImage(
+                                        source: ImageSource.camera);
+                                    t = true;
+                                    Navigator.pop(context);
+                                    setState(() {});
+                                  },
+                                  child: Text("camera")),
+                              TextButton(
+                                  onPressed: () async {
+                                    photo = await picker.pickImage(
+                                        source: ImageSource.gallery);
+                                    t = true;
+                                    Navigator.pop(context);
+                                    setState(() {});
+                                  },
+                                  child: Text("gallery")),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Text("upload photo")),
+                (photo != null)
+                    ? Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: FileImage(File(photo!.path)))),
+                      )
+                    : Text("load image ")
               ],
             ),
-
             ElevatedButton(
                 onPressed: () async {
                   String name = t1.text;
@@ -103,18 +117,17 @@ class _api_creState extends State<api_cre> {
                   var url;
                   if (widget.l != null) {
                     url = Uri.parse(
-                        'https://henistudent.000webhostapp.com/api_create.php?name=$name&contact=$contact&city=$city&id=${widget
-                            .l['id']}');
+                        'https://henistudent.000webhostapp.com/api_create.php?name=$name&contact=$contact&city=$city&id=${widget.l['id']}');
                   } else {
                     url = Uri.parse(
                         'https://henistudent.000webhostapp.com/api_create.php');
                   }
                   var response = await http.post(url, body: {
-                  'name':'$name',
-                  'contact':'$contact',
-                  'city':'$city',
-                   // 'image':'$image',
-                   'image_name':'${photo!.name}'
+                    'name': '$name',
+                    'contact': '$contact',
+                    'city': '$city',
+                    // 'image':'$image',
+                    'image_name': '${photo!.name}'
                   });
                   print('Response status: ${response.statusCode}');
                   print('Response body: ${response.body}');
@@ -122,19 +135,23 @@ class _api_creState extends State<api_cre> {
                   // t2.text = '';
                   // t3.text = '';
 
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context) {
-                    return view_page();
-                  },));
+                  Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context) {
+                      return view_page();
+                    },
+                  ));
                 },
                 child: Text("submit")),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return view_page();
-                    },
-                  ),);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return view_page();
+                      },
+                    ),
+                  );
                 },
                 child: Text("view page"))
           ],

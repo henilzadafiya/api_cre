@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+     float first ,second,result;
+     int size;
+     result= (first= 125.000000, second = 15.000000, first/second);
+     printf("\n First = %f, Second %f, Result = %f", first, second, result);
+     size = sizeof(result);
+
+     printf("\n Size allocated by compiler to var result is %d bytes \n\n", size);
+     return 0;
+}

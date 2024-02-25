@@ -1,16 +1,39 @@
-# api_cre
+<!DOCTYPE html>
+<html>
+<body>
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+	<table border="4">
+		<caption>
+			<h1> <font color="red"> Conference Activities </font></h1>
+		</caption>
+		<tr> 
+			<th></th>
+			<th width="40%">Morning</th>
+			<th>Afternoon</th>
+		</tr>
+		<tr>
+			<th>Day 1</th>
+			<td>Inauguration</td>
+			<td>Key-note Address</td>
+		</tr>
+		<tr>
+			<th>Day 2</th>
+			<td>Paper Presentation</td>
+			<td>
+				<table border="1" bgcolor="Yellow" frame="box" align="right">
+					<caption><h3>Inner Table</h3></caption>
+					<tr>
+						<th>Teacher</th>
+						<th>Student</th>
+					</tr>
+					<tr>
+						<td>Meeting</td>
+						<td>Quiz</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

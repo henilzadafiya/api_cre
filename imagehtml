@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+<title> My favente food...</title>
+
+</head>
+<!-- ------------------------------------------------------------- -->
+
+<body>
+
+<h1> <u> My favorite food....!</h1>
+<!-- ------------------------------------------------------------- -->
+
+
+<h1> <u> Chocolates </u> </h1>
+
+</p>
+
+<img src="chocolate.jpg">
+
+<h1>
+<u>	 	
+Chocolates are good for health, better for hunger and best for mood | Do not forget to clean your teeth until it is too late!
+</u></h1>
+<!-- ------------------------------------------------------------- -->
+
+<h1> <u> Fruits and Dry Fruits
+</u></h1>
+<p>
+<img src="fruits.jpg">
+
+<h1>
+Do not think dry fruits are dry, though they are dried fruits They are really really very interesting!
+</h1>
+<!-- ------------------------------------------------------------- -->
+
+<h1> <u> Ice creams </u></h1>
+
+<p>
+<h1>
+
+<img src="icecream.jpg">
+<h1>
+Ice creams are really cool!
+
+These become coolest when you taste them
+</h1>
+</p>
+<body>
+
+</html>
